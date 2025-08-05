@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Create/Edit";
+}
+
+@model Zee.Models.Expense
+
+<div class="text-center">
+    <h1 class="display-4">Add Expenses</h1>
+</div>
+
+<form asp-action="CreateEditExpense" asp-controller="Home">
+    <label>Value $</label>
+    <input class="form-control" type="number" placeholder="0.00" asp-for="Value" step="0.01" />
+
+    <label class="mt-3">Description $</label>
+    <input class="form-control" type="text" placeholder="Add a description" asp-for="Description" />
+
+    <button class="btn btn-primary mt-4" type="submit">Submit</button>
+</form>
